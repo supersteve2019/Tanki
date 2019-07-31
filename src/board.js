@@ -1,23 +1,33 @@
-const print = console.log;
-
-function drawBoard(){
-    console.log("hi")
-}
-function size(grid){
-    print(grid.length)
-}
-function draw(cell){
-    if(cell === 1){
-        console.log("*")
+function createBoard(size) {
+    if (size <= 0) {
+        throw new Error(`The board size must be positive: got [${size}].`)
     }
-    else{
+    const board = new Array(size);
+    board.forEach((cell, index) => {
+        board[index] = new Array(size);
+    });
+    return board;
+}
+
+function size(board) {
+    return board.length;
+}
+
+function drawBoard(board) {
+    throw new Error('We haven\'t done this yet.')
+}
+
+function drawCell(cell) {
+    if (cell === 1) {
+        console.log("*")
+    } else {
         console.log("_")
     }
-
-    // console.log(cell)
 }
-const board = [1,0,1,0]
-console.log(board)
-drawBoard()
-size(board)
-board.forEach(draw)
+
+module.exports = {
+    createBoard,
+    size,
+    drawBoard,
+    drawCell
+};
