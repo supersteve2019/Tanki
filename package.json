@@ -4,16 +4,19 @@
   "description": "This is an awesome multi-player game.",
   "main": "src/index.js",
   "scripts": {
-    "test": "npx mocha -c --recursive"
+    "test": "npx mocha -c --recursive",
+    "start": "npx http-server"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/supersteve2019/Tanki.git"
   },
-  "keywords": ["game"],
+  "keywords": [
+    "game"
+  ],
   "author": {
-      "name": "Steve",
-      "url": "https://github.com/supersteve2019"
+    "name": "Steve",
+    "url": "https://github.com/supersteve2019"
   },
   "license": "ISC",
   "bugs": {
@@ -21,7 +24,11 @@
   },
   "homepage": "https://github.com/supersteve2019/Tanki#readme",
   "devDependencies": {
+    "http-server": "^0.11.1",
     "mocha": "^6.2.0",
     "must": "^0.13.4"
+  },
+  "dependencies": {
+    "phaser": "^3.18.1"
   }
 }
